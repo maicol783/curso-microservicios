@@ -36,7 +36,7 @@ public class Product {
     @ManyToOne(fetch = FetchType.LAZY)//crear relacion LAZY = carga las categorias cuando se necesite, EAGER las carga todas.
     @JoinColumn(name = "category_id")//Mapear columna en la tabla categoria
     @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
-    @NotNull(message = "La categria no debe ser vacia")
+    @NotNull(message = "La categoria no debe ser vacia")
     private Category category;
 
 

@@ -9,5 +9,6 @@ import java.util.List;
 public interface ProductRepository extends JpaRepository<Product, Long> /*Se pasa la entidad y el tipo de dato de la PK */{
 
     public List<Product> findByCategory(Category category);
+    public Product findByName(String name);
 
 }

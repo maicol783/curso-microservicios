@@ -29,9 +29,16 @@ public class ProductServiceImp implements ProductService{
 
     @Override
     public Product createProduct(Product product) {
+
+        Product productDB = productRepository.findByName(product.getName());
+
+        if (productDB != null){
+            return productDB;
+        }
         product.setStatus("CREATED");
         product.setCreateAt(new Date());
-        return productRepository.save(product);
+        productDB = productRepository.save(product);
+        return productDB;
     }
 
     @Override
