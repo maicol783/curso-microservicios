@@ -1,5 +1,4 @@
 server:
-  waitTimeInMsWhenSyncEmpty: 0
   port: 8099
 
 eureka:
